@@ -103,8 +103,7 @@ A small organization has between 10-49 employees and 10 million euros or less in
 The report points out that the mentioned organizations hesitates to invest in it-solutions due to insecurity and lack of knowledge.\cite{smvdanmark}  
 
 In order to make small and medium-sized organizations use new technology in the future, it is essential to make the technology easy to use and accessible.\cite{smvdanmark} \\ \\ 
-An essential tool for organizations of all sizes are file sharing, both internally and externally. Common file sharing tools are Microsoft Sharepoint and Google Docs. Google Docs is an example of a cloud-based software as a service (SaaS). \cite{Pedersen} The mentioned cloud-based file sharing services are built on a role-based access control (RBAC), which means that permissions regarding rights to read and edit a file is given by predefined roles. \cite{RBAC_vs._ABAC}
-An organization with less than 10 employees in a working group would profit from using role-based access control (ABAC), as it is easier to implement and use. \cite{RBAC_vs._ABAC} \\ \\
+An essential tool for organizations of all sizes are file sharing, both internally and externally. Common file sharing tools are Microsoft Sharepoint and Google Docs. Google Docs is an example of a cloud-based software as a service (SaaS). \cite{Pedersen}\\ \\
 Identity and access management is crucial when it comes to secure data and file sharing within an organization. Many organizations gives too many employees access to different files without any considerations regarding access. \cite{sikkerdigital} Seeing how a role-based access control is easier for small and medium-sized organizations, it is the obvious choice of file sharing. However, an attribute-based access control is considered more secure, since it is less vulnerable to attacks due to features such as time restrictions and more nuanced access.\cite{RBAC_vs._ABAC} It increases the risk of valuable data being accessible for cyber criminals. \cite{sikkerdigital}
 
 \clearpage
@@ -117,6 +116,10 @@ The objective of our project is to examine the current situation for small and m
 
 Our motivation stems from helping small and medium-sized organizations to prevent unauthorized access from a third party by securing their current method of file sharing. Further, the objective is to regulate access to data from external organizations to prevent unnecessary abuse or manipulating data. This should be done in a manner that is easy, accessible and affordable.\\
 
+The difference between medium-sized and small organizations. 
+
+The reason why it is important with safe file sharing: 
+
  
 \label{Problemfield}
 
@@ -124,6 +127,13 @@ Our motivation stems from helping small and medium-sized organizations to preven
  
 \section{Problem Statement}
 \label{problem_statement}
+% Mads
+Hvorfor er SMV’ er sårbare for kompromittering af data og, hvad gør deres valg af overordnede it-løsninger for roller, fildeling og opbevaring af fortrolig information?
+
+Kan rolle fordeling gøres simpelt for små og mellemstore virksomheder, for at undgå rolle exploitation?
+-
+
+
 Draft: How to protect small and medium-sized organizations against attacks caused by unauthorized/not excessive access to shared files? \\ \\Is it possible to find one or more thematic compositions of attributes in ABAC that can replace RBAC as the most relevant file sharing for small/medium-sized organizations. \\ \\
  Objektivet for opgaven er at analysere nuværende arbejdsområde opdelinger, for at afdække huller i rolebaseret adgang og sammeligne med Atribute baseret adgang, 
 
@@ -138,8 +148,7 @@ udfordringer og huller i cloud/ delling mellem eksterne.
 \\  \\
 
 
-
- Kan man finde en eller flere tematisk sammensætninger/pakker af attributter i ABAC, der kan erstatte RBAC, som værende mere relevant på en konkreet moderne abrjedsplads, i deres arbejdsstruktur?
+Kan man finde en eller flere tematisk sammensætninger/pakker af attributter i ABAC, der kan erstatte RBAC, som værende mere relevant på en konkreet moderne abrjedsplads, i deres arbejdsstruktur?
 
 How to make the new attributes more intuitive? Time restricted? Project oriented?
 - Hvordan bliver de nye attributter intuitive? Hvilke atributer, tidsindstillede? Projektorienterede?
@@ -158,7 +167,8 @@ Would it be possible to make a
 
 \subsection{Theory}
 Inductive method? Research
-
+\subsection{Moscow-method}
+\ref{}
 \subsection{Use of AI Tools}
 \label{use_of_ai_tools}
 Used AI primo research assistant
@@ -171,13 +181,79 @@ Identity access management as a search word
 
 \section{Theoretical Background}
 \label{theoretical_Background}
+\subsection{Cloud-based file sharing}
+
+\subsection{Role-based and attribute-based access}
+A role-based access control (RBAC), means that permissions regarding rights to read and edit a file is given by predefined roles.\cite{RBAC_vs._ABAC}
+An organization with less than 10 employees in a working group would profit from using role-based access control (RBAC), as it is easier to implement and use.\cite{RBAC_vs._ABAC} 
+An attribute-based access control refers to a combination of different attributes to handle permission and offers more control.\cite{RBAC_vs._ABAC}
+
+\subsection{Role explosion}
+
+Role explosion is a problem that can be seen in some cases after implementation of RBAC (role based access control). It is more of an access administration problem, than a role problem. In short it describes, an ever escalating expanding in roles. \cite{role_explotion}
+Which can happen when a new role is created whenever an employee needs a new access, instead of altering their existing role. This can happen because it can be easier to create new Roles in RBAC than altering the existing access, because the access is granted through roles. \cite{role_explotion}
 
 
+
+\subsection{Re-BAC}
+Re-BAC meaning Relationship based control, is a graph relationship access based control, that via tuples distribute access to files, in relationship to rather or not the user has access to any folder that in relationship contains the file. 
+
+\subsection{stashing data}
+
+
+\subsection{Segregation of duties}
+
+
+\subsection{ISO standard/NIS 2}
+
+
+
+\subsection{Microsoft Sharepoint}
+Microsoft Sharepoint is a 
+- You can see who the file is shared with
+- change permissions
+- stop sharing files or folders
+\cite{sharepoint}
+
+Question is: possible to change the owner of the file? Is any of it automatic, or does it require a person to actively change it? 
+\subsubsection{External sharing}
+
+\subsubsection{Attributer and roles}
+In Microsoft Sharepoint, there are primarily two different ways to share a file or folder; either share it with specific people or share by using "copy link".\cite{sharepoint}\\ 
+
+When a file or folder is shared with specific people, the person can select which people it should be shared with and their permission in regards to the file or folder.\cite{sharepoint} The permission is divied into different categories such as "can edit", "can review", "can view" and "can't download".\cite{sharepoint}\\
+
+
+
+
+\subsubsection{Security}
+"Authorization refers to the process by which SharePoint provides security for websites, lists, folders, or items by determining which users can perform specific actions on a given object. The authorization process assumes that the user has already been authenticated, which refers to the process by which SharePoint identifies the current user. SharePoint does not implement its own system for authentication or identity management, but instead relies on external systems, whether Windows authentication or non-Windows authentication." (direkte kopi)\cite{sharepoint_security}
+
+\section{Technical Specifications}
+\label{Technical Specifications}
+\subsection{Functional Requirements}
+Under this section, we will use the "Moscow method" (source) which includes the specific requirements to the system such as; create a profile, user access to deletion of a file etc\\
+
+anvender Moscow-method her
+inden for functional req. omhandler om de spesifike krav systemet skal kunne, såsom at kunne oprette en bruger, at en bruger kan slette en mappe osv.
+\subsubsection{Must have:}
+Linux server, role-based, admin role
+\subsubsection{should have:} 
+\subsubsection{could have:}
+\subsubsection{won't have:}
+
+\subsection{Non-Functional Requirements}
+her handler det mere om kvalitet den og har vi nogle tekniske rammer eller love vi skal holde. såsom dataen skal være krypteret, man skal have godkendelse af en anden admin for at kunne oprette en rettighed for en bruger. 
+\subsubsection{Must have:}
+\subsubsection{should have:} 
+\subsubsection{could have:}
+\subsubsection{won't have:}
 
 \clearpage
 % ------------------------------------------------
 % 7. Implementation: 
 % ------------------------------------------------
+
 
 \section{Implementation}
 \label{implementation}
