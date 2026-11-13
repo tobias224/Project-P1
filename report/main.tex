@@ -58,7 +58,7 @@
     \textbf{Authors:} \\
     \hspace*{2cm} Mads Lindegaard\\
     \hspace*{2cm} Emil Malik Stokholm\\
-    \hspace*{2cm} Tobias Scholtz\\
+    \hspace*{2cm} Tobias Schultz\\
     \hspace*{2cm} Dharshika Christopher\\[1cm]
     
     \textbf{Supervisor:} \\
@@ -115,9 +115,6 @@ According to a study conducted by team.blue called "The Digital Maturity Report"
 
 The report points out that the mentioned organizations hesitates to invest in it-solutions due to insecurity and lack of knowledge.\cite{smvdanmark} In order to make small and medium-sized organizations use new technology in the future, it is essential to make the technology easy to use and accessible.\cite{smvdanmark} \\ \\ 
 
-
-
-\clearpage
 % -------------------------
 % 2. Problem Field
 
@@ -133,56 +130,21 @@ The reason why it is important with safe file sharing:
 
  
 \label{Problemfield}
-
-\clearpage
  
 \section{Problem Statement}
 \label{problem_statement}
 % Mads
 Which solutions can improve the security in relation to file sharing in small organtizations?\\
 
-	Kan rolle fordeling gøres simpelt for små og mellemstore virksomheder, for at undgå rolle explosion?
-	How to minimize supply chain attack?
-	How do SME reduce the incentive for supply chain attack (Certificate)
+How to share files that better assess the principle of least privilege? 
 
-
-Kan rolle fordeling gøres simpelt for små og mellemstore virksomheder, for at undgå rolle exploitation?
--
-
-
-Draft: How to protect small and medium-sized organizations against attacks caused by unauthorized/not excessive access to shared files? \\ \\Is it possible to find one or more thematic compositions of attributes in ABAC that can replace RBAC as the most relevant file sharing for small/medium-sized organizations. \\ \\
- Objektivet for opgaven er at analysere nuværende arbejdsområde opdelinger, for at afdække huller i rolebaseret adgang og sammeligne med Atribute baseret adgang, 
-
-kan belyse tilsvarende effektive kriterier for digitale adgangs token.
-
-Regulate which part of shared data, ecternal \\ \\
-
-Udfordringer huller i nuværende rolebaseret  \\ \\
-
-udfordringer og huller i cloud/ delling mellem eksterne. 
-
-
-
-Kan man finde en eller flere tematisk sammensætninger/pakker af attributter i ABAC, der kan erstatte RBAC, som værende mere relevant på en konkreet moderne abrjedsplads, i deres arbejdsstruktur?
-
-How to make the new attributes more intuitive? Time restricted? Project oriented?
-- Hvordan bliver de nye attributter intuitive? Hvilke atributer, tidsindstillede? Projektorienterede?
-
-Which encryption is relevant to protect the attributes? 
-- Hvilke krypteringer er relevante for at bskytte disse attributter?
-
-Where should the guidelines be implemented? 
-- Hvor i netværk skal disse retningslinjer implementeres?
-
-Would it be possible to make a 
-- Hvordan kan dette laves i en pakkeløsning, så interne kan tilgå og benytte denne nye ’AMAC’?
 
 \section{Methodology}
 \label{methodology}
 
 \subsection{Theory}
-Inductive method? Research - Toulmins udvidere argumentationsmodel - fra pBL(?) 
-\ref{}
+Inductive method? Research - Toulmins udvidere argumentationsmodel - fra pBL(?) Design thinking (mentioned by Henning) 
+
 \subsection{Use of AI Tools}
 \label{use_of_ai_tools}
 Used AI primo research assistant
@@ -199,68 +161,48 @@ Identity access management as a search word
 \subsection{Cloud-based file sharing}
 An essential tool for organizations of all sizes are file sharing, both internally and externally. Common file sharing tools are Microsoft Sharepoint and Google Docs. Google Docs is an example of a cloud-based software as a service (SaaS). \cite{IT_Sikkerhed_i_praksis}\\ \\
 
+\subsection{Role and permission}
+"A role is a collection of permissions that allows users to perform specific actions on Google Drive resources. To make permissions available to users, groups, and service accounts, you assign roles. When you assign a role, you grant all the permissions that the role contains."\cite{Microsoft_roles} (OBS: this is a direct copy, rewrite and maybe some pics?)
+
+\subsection{Token}
+
+\subsection{Identity and access management}
+
+
 \subsection{Role-based and attribute-based access}
 A role-based access control (RBAC), means that permissions regarding rights to read and edit a file is given by predefined roles.\cite{RBAC_vs._ABAC}
 An organization with less than 10 employees in a working group would profit from using role-based access control (RBAC), as it is easier to implement and use.\cite{RBAC_vs._ABAC} 
 An attribute-based access control refers to a combination of different attributes to handle permission and offers more control.\cite{RBAC_vs._ABAC}
 
-\subsection{Role explosion}
-Role explosion is a synonym used to describe when the growth of digital roles surpasses the rise in employs. Roles referring to roles use to determine role-based access (RBAC). This happens when employs are assigned new roles to gain access to digital resources, instead of altering existing roles, so it includes customized accesses. Negative results can be an ever-expanding lack of oversight. For the Identity and Access Management employees it can make it hard-to-audit and make access hierarchies, by people having multiples accesses to the same resources, which further result in difficulties in mapping accesses, which can result in unnecessary security risks. \cite{role_explosion}.
-
-Identity and access management is crucial when it comes to secure data and file sharing within an organization. Many organizations gives too many employees access to different files without any considerations regarding access. \cite{sikkerdigital} Seeing how a role-based access control is easier for small and medium-sized organizations, it is the obvious choice of file sharing. However, an attribute-based access control is considered more secure, since it is less vulnerable to attacks due to features such as time restrictions and more nuanced access.\cite{RBAC_vs._ABAC} It increases the risk of valuable data being accessible for cyber criminals. \cite{sikkerdigital}\\ \\
-
-OBS gentagelse\\ \\
-
-Role explosion is a problem that can be seen in some cases after implementation of RBAC (role based access control). It is more of an access administration problem, than a role problem. In short it describes, an ever escalating expanding in roles. \cite{role_explotion}
-Which can happen when a new role is created whenever an employee needs a new access, instead of altering their existing role. This can happen because it can be easier to create new Roles in RBAC than altering the existing access, because the access is granted through roles. \cite{role_explotion}
-
-
-
-\subsection{Re-BAC}
-Re-BAC meaning Relationship based control, is a graph relationship access based control, that via tuples distribute access to files, in relationship to rather or not the user has access to any folder that in relationship contains the file. 
-
 \subsection{Principle of least privilege}
 The principle of least privilege is fundamental regarding cloud computing and cybersecurity.\cite{PoLP} The core of the principle is to ensure that individuals only have the rights that are necessary in order to carry out their distinct function.\cite{PoLP} If the principle of least privilege is not maintained, an organization stands in risk of exposing itself to threats that can cause significant damage.\cite{PoLP}
 
+\subsection{Segregation of duties}
+
+\subsection{Role explosion}
+Role explosion is a synonym used to describe when the growth of digital roles surpasses the rise in employees. Roles referring to access criteria used to determine role-based access (RBAC). This can happen when employees are assigned new roles to gain access to digital resources, instead of altering their existing roles for same access.\cite{role_explosion} 
+
+\subsection{NIS-2 directive in Denmark}
+
+
 % Kort om ISO27001
 \subsection{ISO27001}
-ISO er en organisation der involverer medlemmer fra 165 forskellige lande. Medlemmerne er sammensat fra nationale stadardiserings organer, der tilsammen arbejder med konkrete processer og procedure indenfor f.eks. kvalitetessikring eller digital sikkerhed. 
 ISO2700x er en europæisk standard for processer i en given virksomhed eller organisation. Standarden har til hensigt at øge sikkerhedsniveauet for, hvordan information teknisk og organisatorisk håndteres og udføres.\cite{IT_Sikkerhed_i_praksis}\\
 ISO bygger på ISMS (Information Security Management System), der sikrer at organisationen eller virksomheden har strukturer for sikkerhed helt fra ledelsen og ned igennem organisationen. Det vigtige ved implementering af ISMS er, at det skaber en kontinuerlig gennemgang af de etablerede prossesor, der måtte være indført. En tilbagevenden, vurdering og en eventuel justering eller proces, der følger cybersikkehedens og virksomhedens udvikling.  ONGOING \cite{IT_Sikkerhed_i_praksis}
 
 \subsection{SME (Small and Medium-sized Enterprises)}
 A small organization has between 10-49 employees and 10 million euros or less in turnover, whereas a medium sized-organization has 50-249 employees and 50 million euros or less in turnover.\cite{e-conomic}. The mentioned definitions are based on the formal definitions formed by the European Union.\cite{e-conomic} In Denmark, 99 percent of approximately 300.000 organizations are Small- and medium-sized enterprises.\cite{e-conomic}
-
-- 22\% danske SMV'er kan ikke se, hvad de opnår og får ud af investering i IT sikkerhed.  \cite{Digital_SMV_2024}
-
-\subsection{Stashing data}
-
-
-\subsection{Segregation of duties}
-
-
-\subsection{ISO standard/NIS 2}
-WHy we chose small organizations - they fall outside the scope of the law, cf. 1.1. 
-Small organization outside critical infrastructure. 
-
-Objective: cf § 6,(1),1. 
-"Opererer" - hvad betyder det? Kan mindre virksomheder som arbejder med sektornee falde udenfor. Generelt vil de ikke være en del af det. 
-
-OUR DEFINITION DEPENDS ON THE PRODUCT WE'RE MAKING!!
-
-\subsection{SSH File Transfer Protocol}
-Abbreviated to SSH. 
+(Micro organization: 0-10 employees).\cite{e-conomic} 
 
 \subsection{Microsoft SharePoint}
- SharePoint is a cloud-based service by Microsoft. it is a solution for organizations to replace or modernize traditional file servers and improve document management.
+SharePoint is a cloud-based service by Microsoft. it is a solution for organizations to replace or modernize traditional file servers and improve document management.
  
 Since SharePoint is cloud-based, employees can access shared files and documents remotely from different devices, provided they have the necessary permissions. Administrators can manage access through permission levels, allowing them to control whether users can view, edit, comment on or have full control over files and folders.
 
-Microsoft also provides administrators with additional features to manage authorization at the user and organizational level. For example, administrators can restrict users from sharing files or folders with others. They can also configure time-limited access, ensuring that permissions automatically expire after a specified period.
+\subsubsection{features for Manage Authorization}
+Microsoft also provides administrators with additional features to manage authorization at the user and organizational level. For example, administrators can restrict users from sharing files or folders with others.\cite{sharePoint_sharing} They can also configure time-limited access, ensuring that permissions automatically expire after a specified period.\cite{sharepoint}
 
-SharePoint can be used offline because SharePoint can be synchronize with OneDrive, users can also access files offline if they have previously synchronized or downloaded them to their device. Any changes made while offline are stored locally and synchronized with SharePoint once an internet connection is restored. SharePoint's version history helps track changes and maintain previous versions of documents.
-
-
+SharePoint can be used offline because SharePoint is closely integrated with OneDrive. Users can also access files offline if they have previously synchronized or downloaded them to their device. Any changes made while offline are stored locally and synchronized with SharePoint once an internet connection is restored. SharePoint's version history helps track changes and maintain previous versions of documents.\cite{sharepoint}
 
 version 
 \cite{sharepoint}
@@ -272,32 +214,61 @@ Question is: possible to change the owner of the file? Is any of it automatic, o
 There are different types of service for sharing files securely between organizations. 
 Microsoft provides SharePoint, which is a cloud-based service for administrating, saving, and sharing files in the organization between departments and also between external organizations. 
 
-Sharepoint provides different security options to make sure the files and folders are protected against unauthorized access and data abuse. 
+SharePoint provides different security options to make sure the files and folders are protected against unauthorized access and data abuse. 
 
 For authentication and identity management, SharePoint integrates with Microsoft Entra ID. It provides a secure sign-in and identity governance across cloud and on-premises environments.
 
-Microsoft Entra B2B allows sharing resources between organizations by using Microsoft Entra ID to create a guest account for each person from the external organization that needs to have access. One advantage of this service is that external users do not need a Microsoft account or Microsoft license. Instead, they can use their existing identities and credentials from their own organization to authenticate. The process is simple; your organization just send an invitation to the external users email. This work because of Microsoft Entra ID-tenant creates a guest user object in the directory.....
+Microsoft Entra B2B allows sharing resources between organizations by using Microsoft Entra ID to create a guest account for each person from the external organization that needs to have access. One advantage of this service is that external users do not need a Microsoft account or Microsoft license. Instead, they can use their existing identities and credentials from their own organization to authenticate. The process is simple; your organization just send an invitation to the external users email.\cite{Microsoft_Entra_B2B} 
+ \\\includegraphics[width=0.4\textwidth]{report/images/shared_with_external.png}
+ \includegraphics[width=0.7\textwidth]{report/images/received_shared_file.png} 
+\\This work because of Microsoft Entra ID-tenant creates a guest user object in the directory where you give permission through the persons e-mail where they external organization use there own identity and credentials as seen in the figure below.\cite{Microsoft_Entra_B2B}
+ \\\includegraphics[width=0.6\textwidth]{report/images/file_guest_member.png} \\
 
-you give permission through the persons e-mail where they external organization use there own identity and credentials \cite{Microsoft_Entra_B2B} \\
-
-For additional authentication security, Microsoft Entra B2B also supports Multi-Factor Authentication.\\
-
-when you have shared the resource you can also Authorization so you have full control over what permission the guest have. (see section 5.8.2).
+For additional authentication security, Microsoft Entra B2B also supports Multi-Factor Authentication.\cite{Microsoft_Entra_B2B}when you have shared the resource you can also Authorization so you have full control over what permission the guest have. (see section 5.8.2).
 
 \subsubsection{Attributes and roles}
-In Microsoft Sharepoint, there are primarily two different ways to share a file or folder; either share it with specific people or share by using "copy link".\cite{sharepoint}\\ 
+In Microsoft Sharepoint, there are primarily two different ways to share a file or folder; either share it with specific people or share by using "copy link".\cite{sharepoint}\\ (OBS: this might be a repetition of what's mentioned above)
 
 When a file or folder is shared with specific people, the person can select which people it should be shared with and their permission in regards to the file or folder.\cite{sharepoint} The permission is divided into different categories such as "can edit", "can review", "can view" and "can't download".\cite{sharepoint}\\
 
 When a file or folder is shared by using "copy link", the sender can choose who gets access and (which features) of the access. It can either be given access to anyone with the link, people in the organization, people with existing access or give access to specific people over other people who may already have access.\cite{sharepoint}  
 
 
+\section{Analysis}
+(OBS: every subsection is tentative). 
+\subsection{The size of the organization}
+Argumentation: Why we chose small organizations - they fall outside the scope of the NIS-2 law, cf. § 1.1. (Objective: cf § 6,(1),1 (what does it mean does not "operer" in the sector, Can smaller organizations fall outside the scope? . Are more vulnerable to attacks if they do not have any legal obligations.
+
+\subsection{Why is the approach Role-based?}
+Identity and access management is crucial when it comes to secure data and file sharing within an organization. Many organizations gives too many employees access to different files without any considerations regarding access. \cite{sikkerdigital} Seeing how a role-based access control is easier for small and medium-sized organizations, it is the obvious choice of file sharing. However, an attribute-based access control is considered more secure, since it is less vulnerable to attacks due to features such as time restrictions and more nuanced access.\cite{RBAC_vs._ABAC} It increases the risk of valuable data being accessible for cyber criminals. \cite{sikkerdigital} A purely attribute-based approach is suitable for work environments which are rapidly changing and spread out over multiple locations.\cite{Wikipedia} Furthermore, 22 percent of Danish small- and medium-sized organization fails to see what they can gain by investing in IT-security.\cite{Digital_SMV_2024} 
+Taken into account the mentioned uncertainty of small- and medium-sized organizations willingness to invest in IT-security solutions, it can be presumed that these organizations will choose the well-known role-based access model as Microsoft offers. (OBS: this argument is quite thin and sentence weird).  
+
+\subsection{Common mistakes with Microsoft Sharepoint and One Drive}
+The default behaviour of both Microsoft Sharepoint and One Drive is sharing.\cite{Microsoft_oversharing} (OBS: MAYBE ADD SOME EXAMPLES FROM THE PAGES - PICTURES) When a file or folder is shared as links without login, it cannot be scoped by device policy.\cite{Microsoft_oversharing} (OBS: what is the device policy? How many are logged and how many are not. How is the log accessed: if it's not with an alert, the risk of oversharing might be there, even if the log exist). 
 
 
-\subsubsection{Security}
-"Authorization refers to the process by which SharePoint provides security for websites, lists, folders, or items by determining which users can perform specific actions on a given object. The authorization process assumes that the user has already been authenticated, which refers to the process by which SharePoint identifies the current user. SharePoint does not implement its own system for authentication or identity management, but instead relies on external systems, whether Windows authentication or non-Windows authentication." (direkte kopi)\cite{sharepoint_security}
+\subsection{RBAC contradicting POLP}
+Role explosion is a problem that can be seen in some cases after implementation of RBAC (role based access control). It is more of an access administration problem, than a role problem. In short it describes, an ever escalating expanding in roles. \cite{role_explotion}
+Which can happen when a new role is created whenever an employee needs a new access, instead of altering their existing role. This can happen because it can be easier to create new Roles in RBAC than altering the existing access, because the access is granted through roles. \cite{role_explotion}
+
+Consequences can be an ever-expanding lack of oversight. Oversight caused because the growing amount of roles makes it hard to audit accesses for Identity and Access Management employees. \cite{role_explosion}.
+
+The lack of oversight is a threat and a direct opposite of the principle of least privilege, because... 
+(OBS: A role-based access model can lead to role explosion - need source)
+
+NEED A PRODUCT THAT FORCES STUFF ON THE SIMPLE USER FOR ITS OWN PROTECTION - source, haha(?) formulate this better. Is it already mentioned above, or should it be properly discussed here?
 
 \section{Product Scope}
+
+Tidsbegrænsede tokens
+\\
+log: store mængder data der bliver delt - evt. hvor meget allokeret hukkommelse
+\\
+log: flere roller der giver samme adgange - modvirke role escalering - modvirker evt. SoD fejl -> mulighed for at rolle
+\\
+Mulighed for rolle at samle adgange der går igen i forskellige roller, kun står i en rolle. 
+\\
+
 
 \subsection{Technological specification}
 Ide til opsætning af overvågning af filer
@@ -348,6 +319,7 @@ files[] = antal filer delt
 % ---------------------
 \section{Discussion}
 \label{discussion}
+As we did not have the time to question different organizations about which file sharing program and how they use it - built on presumptions regarding these matters. Should've had more time - which we will have for future projects.  
 
 \subsection{Limitations}
 \label{limitations}
